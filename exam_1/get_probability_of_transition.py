@@ -17,10 +17,10 @@ probabilities = [0.2, 0.2, 0.1, 0.5]
 size = len(neighbor)
 
 matrix = numpy.zeros((size, size))
-for row in range(size):
+for cell in range(size):
     for direction in range(4):
-        neighboring_cell = neighbor[row][direction]
-        matrix[row][neighboring_cell] += probabilities[direction]
+        neighboring_cell = neighbor[cell][direction]
+        matrix[cell][neighboring_cell] += probabilities[direction]
 
 
 def probability(matrix, from_cell, to_cell, steps):
